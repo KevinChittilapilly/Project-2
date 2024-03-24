@@ -45,3 +45,19 @@ document.addEventListener("DOMContentLoaded", function () {
     coursesList.appendChild(courseItem);
   });
 });
+
+document.getElementById('login-form').addEventListener('submit', function(event) {
+  event.preventDefault();
+
+  // Get user input values
+  var email = document.getElementById('email').value;
+  var password = document.getElementById('password').value;
+
+  if (email === 'user@example.com' && password === 'password') {
+    console.log('success');
+      alert('Login successful! Redirecting to your dashboard...');
+      // Redirect to dashboard page
+  } else {
+      alert('Invalid email or password. Please try again.');
+  }
+});
