@@ -1,15 +1,47 @@
-document.addEventListener('DOMContentLoaded', function() {
-    let courses = [
-        {name: "Web Development Bootcamp", instructor: "Colt Steele"},
-        {name: "JavaScript: Understanding the Weird Parts", instructor: "Anthony Alicea"},
-        {name: "Modern React with Redux", instructor: "Stephen Grider"}
-    ];
-
-    let coursesList = document.getElementById('courses-list');
-    courses.forEach(course => {
-        let courseItem = document.createElement('div');
-        courseItem.className = 'course-item';
-        courseItem.innerHTML = `<h3>${course.name}</h3><p>Instructor: ${course.instructor}</p>`;
-        coursesList.appendChild(courseItem);
-    });
+document.addEventListener("DOMContentLoaded", function () {
+  let courses = [
+    {
+      name: "Web Development Bootcamp",
+      instructor: "Colt Steele",
+      price:"$500",
+      rating:"5",
+      img_url: "../assets/course_1.png",
+    },
+    {
+      name: "JavaScript: Understanding the Weird Parts",
+      instructor: "Anthony Alicea",
+      price:"$500",
+      rating:"4",
+      img_url: "../assets/course_2.jpeg",
+    },
+    {
+      name: "Modern React with Redux",
+      instructor: "Stephen Grider",
+      price:"$500",
+      rating:"3",
+      img_url: "../assets/course_3.jpeg",
+    },
+  ];
+  function ratingToStars(rating) {
+    let stars = '';
+    for (let i = 0; i < rating; i++) {
+      stars += '★';
+    }
+    return stars;
+  }
+  let coursesList = document.getElementById("courses-list");
+  courses.forEach((course) => {
+    let courseItem = document.createElement("div");
+    courseItem.className = "course-item";
+    courseItem.innerHTML = `
+        <img src=${course.img_url} class="course_img"/>
+        <h4>${course.name}</h4>
+        <div class="bottom-div">
+        <p class="instructer">Instructor: ${course.instructor}</p>
+        <p>Price: ${course.price}</p>
+        <p>Rating: ${ratingToStars(course.rating)}</p>
+        </div>
+        `;
+    coursesList.appendChild(courseItem);
+  });
 });
