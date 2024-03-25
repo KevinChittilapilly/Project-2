@@ -115,7 +115,7 @@ document.getElementById('login-form').addEventListener('submit', function(event)
   var email = document.getElementById('email').value;
   var password = document.getElementById('password').value;
 
-  if (email === 'user@example.com' && password === 'password') {
+  if (email === 'user@purdue.edu' && password === 'password') {
     console.log('success');
       // alert('Login successful! Redirecting to your dashboard...');
       window.location.href = "home.html"
@@ -123,4 +123,20 @@ document.getElementById('login-form').addEventListener('submit', function(event)
   } else {
       alert('Invalid email or password. Please try again.');
   }
+});
+
+document.getElementById("signupForm").addEventListener("submit", function(event) {
+  event.preventDefault();
+  
+  var fullName = document.getElementById("fullName").value;
+  var email = document.getElementById("email").value;
+  var password = document.getElementById("password").value;
+  var interactiveMode = document.getElementById("interactiveMode").checked;
+  var specialOffers = document.getElementById("specialOffers").checked;
+  
+  console.log("Full Name:", fullName);
+  console.log("Email:", email);
+  console.log("Password:", password);
+  console.log("Interactive Mode:", interactiveMode);
+  console.log("Special Offers:", specialOffers);
 });

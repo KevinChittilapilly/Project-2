@@ -160,29 +160,34 @@ footer{
 
 /* Login Page CSS starts */
 
-
-.login-container {
+.container {
   background-color: #fff;
-  width: 300px;
+  width: 400px;
   margin: 100px auto;
   padding: 20px;
   border-radius: 5px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   text-align:center;
   justify-content: center;
+  font-family: Calibri;
 }
 
-h1 {
+h2 {
   text-align: center;
   color: #333;
+  font-family: Calibri;
+  padding-bottom: 20px;
 }
 
 input[type="email"],
 input[type="password"],
+input[type="text"],
+input[type="radio"],
+input[type="checkbox"]
 button {
   display: block;
-  width: 100%;
-  padding: 10px;
+  width: 90%;
+  padding: 20px;
   margin-bottom: 10px;
   border: 1px solid #ccc;
   border-radius: 3px;
@@ -191,7 +196,12 @@ button {
 button {
   background-color: #007bff;
   color: #fff;
-  border: none;
+  border:#333;
+  padding-right: 15px;
+  padding-left: 15px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  box-shadow:#333;
   cursor: pointer;
 }
 
@@ -206,9 +216,6 @@ button:hover {
 }
 .course-page{
   flex: 0.8;
-}
-.course-page .video{
-
 }
 .sidebar{
   background-color: #f1f1f1;

@@ -5,10 +5,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login | YourDemy</title>
     <link rel="stylesheet" href="../css/style.css">
+    <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+    rel="stylesheet"
+    />
 </head>
 <body>
-    <div class="login-container">
-        <h1>Login to YourDemy</h1>
+    <header>
+        <nav>
+          <ul>
+            <li><a href="/home">YourDemy</a></li>
+            <li><a href="#">Categories</a></li>
+            <div class="search-container">
+              <input type="text" placeholder="Search.." name="search" />
+            </div>
+            <div class="right-items">
+              <li>
+                <a href="#">Interactive Mode</a>
+                <span class="material-symbols-outlined"> toggle_off </span>
+              </li>
+              <li>
+                <span class="material-symbols-outlined"> shopping_cart </span>
+              </li>
+              <li><a href="login.html">Login</a></li>
+              <li><a href="signup.html">Sign Up</a></li>
+            </div>
+          </ul>
+        </nav>
+      </header>
+    <div class="container">
+        <h2>Login to YourDemy</h2>
         <form id="login-form">
             <input type="email" id="email" placeholder="Email" required>
             <input type="password" id="password" placeholder="Password" required>
