@@ -11,6 +11,7 @@ header {
   padding: 10px 0;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08), 0 4px 12px rgba(0, 0, 0, 0.08);
   z-index: 100;
+  font-family: Calibri;
 }
 
 nav ul {
@@ -61,6 +62,7 @@ nav .right-items{
   position: absolute;
   right: 0px;
 }
+
 .search-container input[type="text"] {
   padding: 10px;
   font-size: 17px;
@@ -149,7 +151,8 @@ nav .right-items{
   color: #aabec3;
 }
 body{
-  background-color: #d8e9ef
+  background-color: #d8e9ef;
+  font-family: Calibri;
 }
 footer{
   background-color: black;
@@ -304,4 +307,10 @@ button:hover {
 }
 .dashboard .top-bar p:hover{
   cursor: pointer;
+}
+
+input[type="radio"],
+label {
+    display: inline-block;
+    margin-right: 10px;
 }
