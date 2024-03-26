@@ -12,28 +12,29 @@
 </head>
 <body>
     <header>
-        <nav>
-          <ul>
-            <li><a href="/home">YourDemy</a></li>
-            <li><a href="feedback.html">Categories</a></li>
-            <div class="search-container">
-              <input type="text" placeholder="Search.." name="search" />
-            </div>
-            <div class="right-items">
-              <li>
-                <a href="#">Interactive Mode</a>
-                <span class="material-symbols-outlined"> toggle_off </span>
-              </li>
-              <li>
-                <span class="material-symbols-outlined"> shopping_cart </span>
-              </li>
-              <li><a href="login.html">Login</a></li>
-              <li><a href="signup.html">Sign Up</a></li>
-            </div>
-          </ul>
-        </nav>
+      <nav>
+        <ul>
+          <li><a href="home.html">YourDemy</a></li>
+          <li><a href="feedback.html">Feedback</a></li>
+          <div class="search-container">
+            <input type="text" placeholder="Search.." name="search" />
+          </div>
+          <div class="right-items">
+            <li id="interactive-mode">
+              <a >Interactive Mode</a>
+              <span class="material-symbols-outlined"> toggle_off </span>
+            </li>
+            <li>
+              <span class="material-symbols-outlined"> shopping_cart </span>
+            </li>
+            <span id="userid">
+            <li><a href="login.html">Login</a></li>
+            <li><a href="signup.html">Sign Up</a></li>
+          </div>
+        </ul>
+      </nav>
       </header>
-    <div class="container">
+    <div class="container feedbackform">
         <h2>Feedback Form</h2>
         <form action="submit_feedback.php" method="post">
             <label for="videoLength">Were the options provided for video chunk length suitable for the course?</label><br>
@@ -67,7 +68,7 @@
             </select><br><br>
             
             <label for="suggestions">What suggestions would you have to improve the website?</label><br>
-            <textarea id="suggestions" name="suggestions" rows="4" cols="50"></textarea><br><br>
+            <textarea id="suggestions" name="suggestions" ></textarea><br><br>
             <button type="submit">Submit</button>
             
         </form>

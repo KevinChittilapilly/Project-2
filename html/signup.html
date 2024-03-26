@@ -1,52 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Signup</title>
-    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/style.css" />
     <link
-    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
-    rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+      rel="stylesheet"
     />
-</head>
-<body>
+  </head>
+  <body>
     <header>
-        <nav>
-          <ul>
-            <li><a href="/home">YourDemy</a></li>
-            <li><a href="feedback.html">Categories</a></li>
-            <div class="search-container">
-              <input type="text" placeholder="Search.." name="search" />
-            </div>
-            <div class="right-items">
-              <li>
-                <a href="#">Interactive Mode</a>
-                <span class="material-symbols-outlined"> toggle_off </span>
-              </li>
-              <li>
-                <span class="material-symbols-outlined"> shopping_cart </span>
-              </li>
-              <li><a href="login.html">Login</a></li>
-              <li><a href="signup.html">Sign Up</a></li>
-            </div>
-          </ul>
-        </nav>
-      </header>
-    <div class="container">
-        <h2>Sign up and start learning</h2>
-        <form id="signupForm">
-            <input type="text" id="fullName" placeholder="Full Name" required>
-            <input type="email" id="email" placeholder="Email" required>
-            <input type="password" id="password" placeholder="Password" required>
-            <label for="interactiveMode">Interactive Mode</label>
-            <input type="radio" id="interactiveMode" name="interactiveMode">
-            <input type="checkbox" id="specialOffers" name="specialOffers">
-            <label for="specialOffers">Send me special offers, personalized recommendations, and learning tips</label>
-            <br/><br/>
-            <button type="submit">Sign Up</button>
-        </form>
+      <nav>
+        <ul>
+          <li><a href="home.html">YourDemy</a></li>
+          <li><a href="feedback.html">Feedback</a></li>
+          <div class="search-container">
+            <input type="text" placeholder="Search.." name="search" />
+          </div>
+          <div class="right-items">
+            <li id="interactive-mode">
+              <a >Interactive Mode</a>
+              <span class="material-symbols-outlined"> toggle_off </span>
+            </li>
+            <li>
+              <span class="material-symbols-outlined"> shopping_cart </span>
+            </li>
+            <span id="userid">
+            <li><a href="login.html">Login</a></li>
+            <li><a href="signup.html">Sign Up</a></li>
+          </div>
+        </ul>
+      </nav>
+    </header>
+    <div class="container signup">
+      <h2>Sign up and start learning</h2>
+      <form id="signupForm">
+        <input type="text" id="fullName" placeholder="Full Name" required />
+        <input type="email" id="email" placeholder="Email" required />
+        <input type="password" id="password" placeholder="Password" required />
+        <span
+          style="
+            display: flex;
+            flex: 1;
+            justify-content: flex-start;
+            text-align: start;
+            width: 50%;
+            margin-bottom: 30px;
+          "
+        >
+          <label  id="interactiveMode">Interactive Mode</label>
+          <input
+            style="width: fit-content; margin-top: auto; margin-bottom: auto"
+            type="radio"
+            id="interactiveMode"
+            name="interactiveMode"
+          />
+        </span>
+        <span style="display: flex">
+          <input type="checkbox" id="specialOffers" name="specialOffers" />
+          <label for="specialOffers"
+            >Send me special offers, personalized recommendations, and learning
+            tips</label
+          >
+        </span>
+        <br /><br />
+        <button type="submit">Sign Up</button>
+      </form>
     </div>
     <script src="../js/script.js"></script>
-</body>
+  </body>
 </html>

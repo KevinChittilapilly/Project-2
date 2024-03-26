@@ -73,7 +73,7 @@ document.addEventListener("DOMContentLoaded", function () {
     courseItem.innerHTML = mode
       ? `
         <img src=${course.img_url} class="course_img"/>
-        <h4>${course.name}</h4>
+        <h4 class="course-title">${course.name}</h4>
         <div class="bottom-div">
         <div class="title">
         <p class="instructer">Instructor: ${course.instructor}</p>
@@ -109,7 +109,7 @@ document.addEventListener("DOMContentLoaded", function () {
         `
       : `
         <img src=${course.img_url} class="course_img"/>
-        <h4>${course.name}</h4>
+        <h4 class="course-title">${course.name}</h4>
         <div class="bottom-div">
         <p class="instructer">Instructor: ${course.instructor}</p>
         <p>Price: ${course.price}</p>
@@ -183,7 +183,7 @@ if (useriddiv) {
   useriddiv.innerHTML =
     user == null
       ? `<li class="li-user"><a href="login.html">Login</a></li>
-<li><a href="#">Sign Up</a></li>`
+<li><a href="signup.html">Sign Up</a></li>`
       : `<li><a href="">Welcome ${user}</a></li>
 `;
 }
@@ -227,15 +227,6 @@ document.getElementById("interactive-mode")?.addEventListener("click", (e) => {
   e.preventDefault();
   const mode = sessionStorage.getItem("toggle") === "true"; // Convert to boolean
   sessionStorage.setItem("toggle", !mode);
-  // document.getElementById("interactive-mode").innerHTML = !mode
-  //   ? ` <li id="interactive-mode">
-  // <a >Interactive Mode</a>
-  // <span class="material-symbols-outlined"> toggle_off </span>
-  // </li>`
-  //   : ` <li id="interactive-mode">
-  // <a >Interactive Mode</a>
-  // <span class="material-symbols-outlined"> toggle_on </span>
-  // </li>`;
   console.log(mode)
   location.reload();
 });

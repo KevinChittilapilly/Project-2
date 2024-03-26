@@ -36,6 +36,9 @@ nav ul li a {
   text-align: center;
   padding-bottom: 500px;
 }
+.featured-courses h1{
+  font-size: 3em;
+}
 #userid {
   display: flex;
 }
@@ -69,6 +72,10 @@ nav ul li a {
   width: calc(27% - 20px);
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   overflow: hidden;
+
+}
+.course-item .course-title{
+  font-family: cursive;
 }
 .search-container {
   text-align: center;
@@ -191,7 +198,7 @@ footer{
 
 .container {
   background-color: #fff;
-  width: 400px;
+  width: 600px;
   margin: 100px auto;
   padding: 20px;
   border-radius: 5px;
@@ -199,6 +206,8 @@ footer{
   text-align:center;
   justify-content: center;
   font-family: Calibri;
+  font-size: 25px;
+
 }
 
 h2 {
@@ -217,7 +226,7 @@ button {
   display: block;
   width: 90%;
   padding: 20px;
-  margin-bottom: 10px;
+  /* margin-bottom: 10px; */
   border: 1px solid #ccc;
   border-radius: 3px;
 }
@@ -339,4 +348,23 @@ input[type="radio"],
 label {
     display: inline-block;
     margin-right: 10px;
+}
+.feedbackform input[type="radio"],
+label{
+  width: fit-content;
+}
+
+.signup input {
+  margin-bottom: 10px;
+}
+.login input {
+  margin-bottom: 10px;
+}
+.feedbackform #suggestions{
+  width: 100%;
+}
+@media screen and (max-width: 600px) {
+  .container{
+    width: 60%;
+  }
 }
