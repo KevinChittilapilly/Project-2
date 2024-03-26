@@ -210,6 +210,40 @@ footer{
 
 }
 
+.rewards-container {
+  background-color: #fff;
+  width: 800px;
+  margin: 100px auto;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align:center;
+  /* justify-content: center; */
+  font-family: Calibri;
+}
+
+.rewards-container .rewards{
+ text-align: left;
+ width: 20%;
+}
+
+.rewards-container {
+  background-color: #fff;
+  width: 800px;
+  margin: 100px auto;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align:center;
+  /* justify-content: center; */
+  font-family: Calibri;
+}
+
+.rewards-container .rewards{
+ text-align: left;
+ width: 20%;
+}
+
 h2 {
   text-align: center;
   color: #333;
