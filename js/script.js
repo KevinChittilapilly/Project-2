@@ -1,4 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
+  // The following content has been referenced from Udemy
   var newPanelItems = {
     panel1: [
       "Introduction to AWS",
@@ -23,6 +24,7 @@ document.addEventListener("DOMContentLoaded", function () {
     ],
     // Add more arrays as needed for additional panels
   ];
+  // The following content has been referenced from Udemy
   let courses = [
     {
       name: "Web Development Bootcamp",
@@ -64,12 +66,13 @@ document.addEventListener("DOMContentLoaded", function () {
   courses?.forEach((course) => {
     let courseItem = document.createElement("div");
     courseItem.className = "course-item";
-    const mode = sessionStorage.getItem("toggle") === "true";
+    const mode = sessionStorage.getItem("interactiveMode") === "true";
     if (mode === false) {
       courseItem.onclick = () => {
         window.location.href = "course.html";
       };
-    } 
+    }
+    // Rendering different content based on the interactive mode
     courseItem.innerHTML = mode
       ? `
         <img src=${course.img_url} class="course_img"/>
@@ -117,14 +120,13 @@ document.addEventListener("DOMContentLoaded", function () {
         </div>
         `;
     coursesList?.appendChild(courseItem);
-    const allGoToCourseDivs = document.getElementsByClassName("go-to-course")
-    Array.from(allGoToCourseDivs).forEach(element => {
-      element.addEventListener('click', myClickFunction);
+    const allGoToCourseDivs = document.getElementsByClassName("go-to-course");
+    Array.from(allGoToCourseDivs).forEach((element) => {
+      element.addEventListener("click", myClickFunction);
     });
   });
-  function myClickFunction () {
+  function myClickFunction() {
     window.location.href = "course.html";
-
   }
   var acc = document.getElementsByClassName("accordion-button");
   var i;
@@ -192,67 +194,71 @@ if (useriddiv) {
 `;
 }
 
-document.getElementById('sign-out')?.addEventListener('click', function(event) {
-  event.preventDefault();
+document
+  .getElementById("sign-out")
+  ?.addEventListener("click", function (event) {
+    event.preventDefault();
 
-  // Get user input values
-  sessionStorage.clear()
-  location.reload();
-  window.location.href = "home.html";
- 
-});
+    // Get user input values
+    sessionStorage.clear();
+    location.reload();
+    window.location.href = "home.html";
+  });
 
-document.getElementById('login-form')?.addEventListener('submit', function(event) {
-  event.preventDefault();
+document
+  .getElementById("login-form")
+  ?.addEventListener("submit", function (event) {
+    event.preventDefault();
 
-  // Get user input values
-  var email = document.getElementById('email').value;
-  var password = document.getElementById('password').value;
+    // Get user input values
+    var email = document.getElementById("email").value;
+    var password = document.getElementById("password").value;
 
-  if (email === 'user@purdue.edu' && password === 'password') {
-    console.log('success');
+    if (email === "user@purdue.edu" && password === "password") {
+      console.log("success");
       // alert('Login successful! Redirecting to your dashboard...');
-      window.location.href = "home.html"
+      window.location.href = "home.html";
       // Redirect to dashboard page
-  } else {
-      alert('Invalid email or password. Please try again.');
-  }
-});
+    } else {
+      alert("Invalid email or password. Please try again.");
+    }
+  });
 
-document.getElementById("signupForm")?.addEventListener("submit", function(event) {
-  event.preventDefault();
-  
-  var fullName = document.getElementById("fullName").value;
-  var email = document.getElementById("email").value;
-  var password = document.getElementById("password").value;
-  var interactiveMode = document.getElementById("interactiveMode").checked;
-  var specialOffers = document.getElementById("specialOffers").checked;
-  
-  console.log("Full Name:", fullName);
-  console.log("Email:", email);
-  console.log("Password:", password);
-  console.log("Interactive Mode:", interactiveMode);
-  console.log("Special Offers:", specialOffers);
-});
+document
+  .getElementById("signupForm")
+  ?.addEventListener("submit", function (event) {
+    event.preventDefault();
 
+    var fullName = document.getElementById("fullName").value;
+    var email = document.getElementById("email").value;
+    var password = document.getElementById("password").value;
+    var interactiveMode = document.getElementById("interactiveMode").checked;
+    var specialOffers = document.getElementById("specialOffers").checked;
+
+    console.log("Full Name:", fullName);
+    console.log("Email:", email);
+    console.log("Password:", password);
+    console.log("Interactive Mode:", interactiveMode);
+    console.log("Special Offers:", specialOffers);
+  });
 
 document.getElementById("interactive-mode")?.addEventListener("click", (e) => {
   e.preventDefault();
-  const mode = sessionStorage.getItem("toggle") === "true"; // Convert to boolean
-  sessionStorage.setItem("toggle", !mode);
-  console.log(mode)
+  const mode = sessionStorage.getItem("interactiveMode") === "true"; // Convert to boolean
+  sessionStorage.setItem("interactiveMode", !mode);
+  console.log(mode);
   location.reload();
 });
 
-let interactive_mode = document.getElementById("interactive-mode")
-const mode = sessionStorage.getItem("toggle") === "true";
-if(interactive_mode) {
-  interactive_mode.innerHTML =  !mode
-  ? ` <li id="interactive-mode">
+let interactive_mode = document.getElementById("interactive-mode");
+const mode = sessionStorage.getItem("interactiveMode") === "true";
+if (interactive_mode) {
+  interactive_mode.innerHTML = !mode
+    ? ` <li id="interactive-mode">
 <a >Interactive Mode</a>
 <span class="material-symbols-outlined"> toggle_off </span>
 </li>`
-  : ` <li id="interactive-mode">
+    : ` <li id="interactive-mode">
 <a >Interactive Mode</a>
 <span class="material-symbols-outlined" style="color: green;"> toggle_on </span>
 </li>`;
