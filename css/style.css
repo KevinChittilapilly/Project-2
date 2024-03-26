@@ -367,4 +367,59 @@ label{
   .container{
     width: 60%;
   }
+  nav .right-items {
+    justify-content: start;
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    align-items: start;
+  }
+  nav ul {
+    align-items: start;
+    flex-direction: column;
+  }
+  nav #interactive-mode{
+    margin: 0 0 0 10px;
+  }
+  .feedbackform {
+    font-size: 20px;
+  }
+  .course-item{
+    width: auto;
+  }
+  /* .outer-div .sidebar {
+    order: 1;
+  }
+  .outer-div .course-page{
+    order: 2;
+  } */
+  .outer-div{
+    flex-direction: column-reverse;
+  }
+  .outer-div .top-bar{
+    overflow: hidden;
+  }
+  .dashboard .content {
+    padding: 10px;
+  }
+  .accordion-item .accordion-button{
+    font-size: 12px;
+    padding: 0px;
+  }
+  .login {
+    width: fit-content;
+    margin: 20px;
+  }
+  .login h2 {
+    font-size: 20px;
+  }
+  .login input{
+    width: fit-content;
+  }
+  .container{
+    font-size: 20px;
+  }
+  .container input{
+    width: fit-content;
+  }
 }

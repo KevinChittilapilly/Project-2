@@ -92,7 +92,7 @@ document.addEventListener("DOMContentLoaded", function () {
         <div class="price-div">
         <p>Price: ${course.price}</p>
         <div class="dropdown">
-        <label for="duration1">Ques Location</label>
+        <label for="duration1">Quiz Location</label>
         <select id="duration1">
           <option>In between the lecture</option>
           <option>At the end of the lecture</option>
@@ -117,7 +117,10 @@ document.addEventListener("DOMContentLoaded", function () {
         </div>
         `;
     coursesList?.appendChild(courseItem);
-    document.querySelector('#goToCourseButton')?.addEventListener('click', myClickFunction);
+    const allGoToCourseDivs = document.getElementsByClassName("go-to-course")
+    Array.from(allGoToCourseDivs).forEach(element => {
+      element.addEventListener('click', myClickFunction);
+    });
   });
   function myClickFunction () {
     window.location.href = "course.html";
@@ -185,9 +188,19 @@ if (useriddiv) {
       ? `<li class="li-user"><a href="login.html">Login</a></li>
 <li><a href="signup.html">Sign Up</a></li>`
       : `<li><a href="">Welcome ${user}</a></li>
+      <li><a id="sign-out">Sign out</a></li>
 `;
 }
 
+document.getElementById('sign-out')?.addEventListener('click', function(event) {
+  event.preventDefault();
+
+  // Get user input values
+  sessionStorage.clear()
+  location.reload();
+  window.location.href = "home.html";
+ 
+});
 
 document.getElementById('login-form')?.addEventListener('submit', function(event) {
   event.preventDefault();
